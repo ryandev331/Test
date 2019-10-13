@@ -5,12 +5,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
     <title>Document</title>
 </head>
 
 <body>
     <!-- facebook sdk -->
     <script>
+        var checkLoginInfo = function(status) {
+            var loginStatus = $('.loginStatus p')
+            switch (status) {
+                case 'connected':
+                    loginStatus.text('FB與網站皆登入!')
+                    break
+                case 'not_authorized ':
+                    loginStatus.text('FB登入但網站未登入!')
+                    break
+                case 'unknown':
+                    loginStatus.text('FB未登入!')
+                    break
+            }
+        }
         window.fbAsyncInit = function() {
             FB.init({
                 appId: '2575204095859039',
@@ -35,13 +50,10 @@
             js.src = 'https://connect.facebook.net/en_US/sdk.js'
             fjs.parentNode.insertBefore(js, fjs)
         })(document, 'script', 'facebook-jssdk')
-
-        // FB.getLoginStatus(function(response) {
-        //     statusChangeCallback(response)
-        // })
-
-        // console.log(FB)
     </script>
+    <div class="loginStatus">
+        <p></p>
+    </div>
 </body>
 
 </html>
