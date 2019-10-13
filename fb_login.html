@@ -11,6 +11,13 @@
 
 <body>
     <!-- facebook sdk -->
+    <!-- <div id="fb-root"></div>
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v4.0&appId=2575204095859039&autoLogAppEvents=1"
+    ></script> -->
     <script>
         var checkLoginInfo = function(status) {
             var loginStatus = $('.loginStatus p')
@@ -56,6 +63,8 @@
         <p></p>
     </div>
     <div class="fb-login-button" data-width="200" data-size="large" data-button-type="login_with" data-auto-logout-link="true" data-use-continue-as="true"></div>
+    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+    </fb:login-button>
 </body>
 
 </html>
