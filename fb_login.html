@@ -38,7 +38,7 @@
             FB.AppEvents.logPageView()
             FB.getLoginStatus(function(response) {
                 checkLoginInfo(response.status)
-                    // console.log(response)
+                console.log(response.status)
             })
         };
         (function(d, s, id) {
