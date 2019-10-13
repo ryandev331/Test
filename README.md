@@ -1,2 +1,2 @@
-# nuxt-gogofun
+# FB-login
 First nuxt app built.
