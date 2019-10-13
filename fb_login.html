@@ -19,7 +19,6 @@
                     loginStatus.text('FB與網站皆登入!')
                     break
                 case 'not_authorized':
-                    console.log('Fun:not_authorized')
                     loginStatus.text('FB登入但網站未登入!')
                     break
                 case 'unknown':
@@ -56,6 +55,7 @@
     <div class="loginStatus">
         <p></p>
     </div>
+    <div class="fb-login-button" data-width="200" data-size="large" data-button-type="login_with" data-auto-logout-link="true" data-use-continue-as="true"></div>
 </body>
 
 </html>
